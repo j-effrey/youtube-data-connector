@@ -82,7 +82,7 @@
       "subfieldPath": []
     },
     {
-      "field": "youtube_videoID",
+      "field": "c_youtube_videoID",
       "header": "Video ID 2",
       "subfieldPath": []
     },
@@ -97,7 +97,7 @@
       "subfieldPath": []
     },
     {
-      "field": "youtube_thumbnailPhoto",
+      "field": "c_youtube_thumbnailPhoto",
       "header": "Thumbnail URL",
       "subfieldPath": [
         {
@@ -106,12 +106,12 @@
       ]
     },
     {
-      "field": "youtube_publishedAt",
+      "field": "c_youtube_publishedAt",
       "header": "Published At",
       "subfieldPath": []
     },
     {
-      "field": "youtube_channelID",
+      "field": "c_youtube_channelID",
       "header": "Channel ID",
       "subfieldPath": []
     }

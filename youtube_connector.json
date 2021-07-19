@@ -1,0 +1,119 @@
+{
+  "$id": "youtube_apiConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v1",
+  "displayName": "YouTube API Connector",
+  "entityType": "youtube_video",
+  "source": {
+    "sourceConfig": {
+      "apiPullConfig": {
+        "requestType": "GET",
+        "url": "https://www.googleapis.com/youtube/v3/search",
+        "authentication": {
+          "apiKey": {
+            "key": "key",
+            "value": "${{km/connector.youtubeApi.api_key_value}}",
+            "setAsHeader": false
+          }
+        },
+        "paginationControl": {
+          "cursorPagination": {
+            "pageKey": "pageToken",
+            "cursor": "nextPageToken",
+            "cursorType": "TOKEN",
+            "detectCursorInHeader": false
+          }
+        },
+        "headers": {},
+        "queryParams": {
+          "channelId": "${{km/connector.youtubeApi.channel_id}}",
+          "part": "snippet",
+          "type": "video"
+        },
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "item",
+      "path": "items"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "Video ID",
+        "path": "id.videoId"
+      },
+      {
+        "type": "JSON",
+        "header": "Video ID 2",
+        "path": "id.videoId"
+      },
+      {
+        "type": "JSON",
+        "header": "Name",
+        "path": "snippet.title"
+      },
+      {
+        "type": "JSON",
+        "header": "Description",
+        "path": "snippet.description"
+      },
+      {
+        "type": "JSON",
+        "header": "Thumbnail URL",
+        "path": "snippet.thumbnails.default.url"
+      },
+      {
+        "type": "JSON",
+        "header": "Published At",
+        "path": "snippet.publishedAt"
+      },
+      {
+        "type": "JSON",
+        "header": "Channel ID",
+        "path": "snippet.channelId"
+      }
+    ]
+  },
+  "mappings": [
+    {
+      "field": "yext/entityId",
+      "header": "Video ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "youtube_videoID",
+      "header": "Video ID 2",
+      "subfieldPath": []
+    },
+    {
+      "field": "yext/name",
+      "header": "Name",
+      "subfieldPath": []
+    },
+    {
+      "field": "yext/description",
+      "header": "Description",
+      "subfieldPath": []
+    },
+    {
+      "field": "youtube_thumbnailPhoto",
+      "header": "Thumbnail URL",
+      "subfieldPath": [
+        {
+          "name": "url"
+        }
+      ]
+    },
+    {
+      "field": "youtube_publishedAt",
+      "header": "Published At",
+      "subfieldPath": []
+    },
+    {
+      "field": "youtube_channelID",
+      "header": "Channel ID",
+      "subfieldPath": []
+    }
+  ]
+}

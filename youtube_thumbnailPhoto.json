@@ -1,5 +1,5 @@
 {
-    "$id": "youtube_thumbnailPhoto",
+    "$id": "c_youtube_thumbnailPhoto",
     "$schema": "https://schema.yext.com/config/km/field/v1",
     "displayName": "Thumbnail Photo",
     "group": "NONE",

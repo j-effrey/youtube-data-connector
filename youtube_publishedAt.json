@@ -1,5 +1,5 @@
 {
-    "$id": "youtube_publishedAt",
+    "$id": "c_youtube_publishedAt",
     "$schema": "https://schema.yext.com/config/km/field/v1",
     "displayName": "Published At",
     "group": "NONE",

@@ -1,5 +1,5 @@
 {
-  "$id": "youtube_channelID",
+  "$id": "c_youtube_channelID",
   "$schema": "https://schema.yext.com/config/km/field/v1",
   "displayName": "Channel ID",
   "group": "NONE",

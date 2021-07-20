@@ -11,7 +11,7 @@
         "authentication": {
           "apiKey": {
             "key": "key",
-            "value": "${{km/connector.youtubeApi.api_key_value}}",
+            "value": "${{youtubeApi.api_key_value}}",
             "setAsHeader": false
           }
         },
@@ -25,7 +25,7 @@
         },
         "headers": {},
         "queryParams": {
-          "channelId": "${{km/connector.youtubeApi.channel_id}}",
+          "channelId": "${{youtubeApi.channel_id}}",
           "part": "snippet",
           "type": "video"
         },
